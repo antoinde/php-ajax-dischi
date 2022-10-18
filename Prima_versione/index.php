@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- LINK TO MY CSS -->
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/php-ajax-dischi/root/style.css">
     <!-- TITOLO ESERCIZIO -->
     <title>PHP Dischi</title>
 </head>

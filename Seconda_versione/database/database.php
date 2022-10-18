@@ -71,7 +71,9 @@
             "genre"=> "Pop",
             "year"=> "1987"
           ]
-        ]
+          ];
       
-
+        // Esportalo come JSON (we change all database FROM 'array of array' TO 'objects of objects')
+        header("Content-Type: application/json");
+        echo json_encode($database);
 ?>

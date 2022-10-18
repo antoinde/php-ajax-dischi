@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Libreria AXIOS -->
+    <script 
+     src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+     integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+    ></script>
+    <!-- Libreria VueJS -->
+    <script
+     src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.13/vue.min.js"
+     integrity="sha512-9PmLIATEd4w0OxdTHq61p12lQqa8OtDC6nXu0+S1Icb800oxoADle+gaPfmAXLa35KSvk/6bGeNRfi3nq0Hvvw=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+    ></script>
+    <!-- Link to Javascript -->
+    <script src="script/main.js" defer></script>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/php-ajax-dischi/root/style.css"/>
+
+    <title>PHP Dischi</title>
+</head>
+<body>
+    <!-- AppVueJS -->
+    <div id="app">
+
+        <header>
+            <h1>Prelevati dischi dal database PHP come JSON </h1>
+        </header>
+
+        <main>
+            <!-- MILESTONE 1 -->
+            <div class="lista">
+                <h2>MILESTONE 1:</h2>
+                <ul>
+                    <li v-for="album in albums"> {{ album.title }} </li>
+                </ul>
+            </div>
+            <!-- MILESTONE 2 -->
+            <h2 style="text-align:center">MILESTONE 2:</h2>
+            <div class="card-container">
+
+                <div v-for="album in albums" class="card">
+
+                    <!-- Parte superiore della card -->
+                    <div class="card-img-container">
+                        <img :src="album.poster" :alt="album.title"/>
+                    </div>
+                    <!-- Parte inferiore della card -->
+                    <div class="card-info-container">
+                        <h3> {{ album.title }} </h3>
+                        <p> {{ album.author }} </p>
+                        <p> {{ album.year }} </p>
+                        <p> {{ album.genre }} </p>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>
